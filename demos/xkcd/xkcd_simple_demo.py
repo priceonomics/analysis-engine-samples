@@ -46,7 +46,7 @@ data = {
 links_dict = api_request('links', data)
 comics = {}
 for link in links_dict['data']['links']:
-        comics[link['url']] = link['text']
+    comics[link['url']] = link['text']
 urls = sorted(comics.keys(), key=lambda x: int(x.split('/')[3]))               # Let's sort our URL list nicely.
 print len(urls),  'URLs found'
 
